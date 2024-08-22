@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações e Curadoria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.preformatted {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    overflow: hidden; /* Remove scrollbars */
+    white-space: pre-wrap; /* Wraps text and maintains formatting */
+    word-wrap: break-word; /* Breaks long words */
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Recomendações</h1>
+        <pre class="preformatted">{{ recommendations }}</pre>
+        <h1>Curadoria</h1>
+        <pre class="preformatted">{{ curadoria }}</pre>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Fazer Nova Análise</a>
+        </div>
+    </div>
+</body>
+</html>
